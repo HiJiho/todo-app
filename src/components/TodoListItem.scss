@@ -19,7 +19,7 @@
       margin-left: 0.5rem;
       flex: 1;
     }
-    // 체크되었을 때 보여 줄 스타일
+    // 체크되었을 때 보여 줄 스타일, checkbox 클래스가 checked 클래스도 가지고 있어야 실행됨
     &.checked {
       svg {
         color: #22b8cf;
