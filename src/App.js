@@ -26,7 +26,6 @@ const App = () => {
   // ref를 사용하여 변수 담기, 렌더링에 영향받지 않는 로컬변수!!
   const nextId = useRef(4);
 
-  //? 어떻게 TodoInsert의 state를 App에서 사용할까?
   const onInsert = useCallback(
     (text) => {
       const todo = {
@@ -40,10 +39,17 @@ const App = () => {
     [todos],
   );
 
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos],
+  );
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
   );
 };
