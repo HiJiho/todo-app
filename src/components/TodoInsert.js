@@ -21,7 +21,7 @@ const TodoInsert = ({ onInsert }) => {
     [onInsert, value],
   );
 
-  //? 왜 submit은 form에?
+  //? submit과 form의 관계
   return (
     <form className="TodoInsert" onSubmit={onSubmit}>
       <input
