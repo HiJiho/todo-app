@@ -19,4 +19,4 @@
     - todos 배열을 props로 받아 옴
     - 받아온 todos 배열을 map을 사용해 여러 개의 TodoListItem 컴포넌트로 변환하여 보여줌
 
-워크트리 연습1
+워크트리 연습2
