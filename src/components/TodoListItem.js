@@ -7,13 +7,13 @@ import {
 import './TodoListItem.scss';
 import cn from 'classnames';
 
-const TodoListItem = ({ todo, onRemove, onToggle, style }) => {
-  // key를 따로 처리하기에 받아오지 않음
+const TodoListItem = ({ todo, onRemove, onToggle, style, index }) => {
+  const isEven = index % 2 === 0;
   const { id, text, checked } = todo;
 
   return (
     <div className="TodoListItem-virtualized" style={style}>
-      <div className="TodoListItem">
+      <div className={`TodoListItem ${isEven ? 'even' : ''}`}>
         <div
           className={cn('checkbox', { checked })}
           onClick={() => onToggle(id)}

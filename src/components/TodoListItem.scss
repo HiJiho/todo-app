@@ -2,8 +2,8 @@
   & + & {
     border-top: 1px solid #dee2e6;
   }
-  &:nth-child(even) {
-    background: #0080ff;
+  .even {
+    background: #f8f9fa;
   }
   .TodoListItem {
     padding: 1rem;

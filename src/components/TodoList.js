@@ -14,6 +14,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
           onRemove={onRemove}
           onToggle={onToggle}
           style={style}
+          index={index} // 스타일 위해 인덱스 추가
         />
       );
     },
